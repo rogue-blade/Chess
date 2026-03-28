@@ -1,7 +1,8 @@
+#include "window.hpp"
 #include <SFML/Graphics/RenderWindow.hpp>
 
 int main() {
-  sf::RenderWindow window(sf::VideoMode({800, 600}), "Chess", sf::Style::Close);
+  sf::RenderWindow window{set_window()};
 
   while (window.isOpen()) {
     while (const std::optional event{window.pollEvent()}) {
